@@ -1,0 +1,123 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 80 30% 97%;
+    --foreground: 150 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 10% 10%;
+
+    --primary: 143 37% 38%;
+    --primary-foreground: 60 30% 96%;
+
+    --secondary: 80 30% 96%;
+    --secondary-foreground: 143 37% 38%;
+
+    --muted: 60 20% 90%;
+    --muted-foreground: 150 5% 40%;
+
+    --accent: 33 93% 70%;
+    --accent-foreground: 143 37% 38%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 143 15% 85%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 143 37% 38%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 143 37% 38%;
+    --sidebar-foreground: 60 30% 96%;
+    --sidebar-primary: 143 47% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 33 93% 70%;
+    --sidebar-accent-foreground: 143 37% 38%;
+    --sidebar-border: 143 30% 30%;
+    --sidebar-ring: 143 47% 45%;
+  }
+
+  .dark {
+    --background: 150 10% 10%;
+    --foreground: 60 30% 96%;
+
+    --card: 150 8% 15%;
+    --card-foreground: 60 30% 96%;
+
+    --popover: 150 8% 15%;
+    --popover-foreground: 60 30% 96%;
+
+    --primary: 143 37% 38%;
+    --primary-foreground: 60 30% 96%;
+
+    --secondary: 143 20% 20%;
+    --secondary-foreground: 60 30% 96%;
+
+    --muted: 143 15% 25%;
+    --muted-foreground: 60 10% 70%;
+
+    --accent: 33 93% 70%;
+    --accent-foreground: 143 37% 38%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 30% 96%;
+
+    --border: 143 15% 25%;
+    --input: 143 15% 25%;
+    --ring: 143 47% 45%;
+
+    --sidebar-background: 143 20% 20%;
+    --sidebar-foreground: 60 30% 96%;
+    --sidebar-primary: 143 37% 38%;
+    --sidebar-primary-foreground: 60 30% 96%;
+    --sidebar-accent: 33 93% 70%;
+    --sidebar-accent-foreground: 143 37% 38%;
+    --sidebar-border: 143 15% 25%;
+    --sidebar-ring: 143 47% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.ag-card-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.ag-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.sensor-active {
+  position: relative;
+}
+
+.sensor-active::after {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+
+.weather-icon {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
