@@ -1,18 +1,17 @@
-
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { 
-  Calendar, 
-  Database, 
-  FileText, 
-  Settings, 
+import {
+  Calendar,
+  Database,
+  FileText,
+  Settings,
   User,
   Cloud,
   Map,
-  Search
+  Search,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -21,7 +20,7 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   const location = useLocation();
-  
+
   const isActive = (path: string) => {
     return location.pathname === path;
   };
@@ -61,13 +60,21 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
       title: "Soporte",
       href: "/soporte",
       icon: <User className="size-5" />,
-    }
+    },
   ];
 
   return (
-    <div className={cn("w-64 border-r bg-sidebar border-sidebar-border", className)}>
+    <div
+      className={cn(
+        "w-64 border-r bg-sidebar border-sidebar-border",
+        className
+      )}
+    >
       <div className="flex h-16 items-center px-6">
-        <Link to="/" className="flex items-center gap-2 font-semibold text-sidebar-foreground">
+        <Link
+          to="/"
+          className="flex items-center gap-2 font-semibold text-sidebar-foreground"
+        >
           <div className="p-1 px-2 rounded-md bg-sidebar-accent text-sidebar-accent-foreground font-bold">
             Agro
           </div>

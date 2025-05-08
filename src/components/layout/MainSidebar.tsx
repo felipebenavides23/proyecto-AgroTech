@@ -1,69 +1,68 @@
-
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
-import { 
-  Sidebar, 
-  SidebarContent, 
-  SidebarHeader, 
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel
+  SidebarGroupLabel,
 } from "@/components/ui/sidebar";
-import { 
-  Calendar, 
-  Database, 
-  FileText, 
-  Settings, 
+import {
+  Calendar,
+  Database,
+  FileText,
+  Settings,
   User,
   Cloud,
   Map,
   Search,
-  HelpCircle
+  HelpCircle,
 } from "lucide-react";
 
 export const MainSidebar: React.FC = () => {
   const location = useLocation();
-  
+
   const navItems = [
     {
       title: "Dashboard",
       href: "/",
       icon: Map,
     },
-    {
-      title: "Cultivos",
-      href: "/cultivos",
-      icon: FileText,
-    },
-    {
-      title: "Clima",
-      href: "/clima",
-      icon: Cloud,
-    },
+    // {
+    //   title: "Cultivos",
+    //   href: "/cultivos",
+    //   icon: FileText,
+    // },
+    // {
+    //   title: "Clima",
+    //   href: "/clima",
+    //   icon: Cloud,
+    // },
     {
       title: "Inventario",
       href: "/inventario",
       icon: Database,
     },
-    {
-      title: "Calendario",
-      href: "/calendario",
-      icon: Calendar,
-    },
-    {
-      title: "Capacitación",
-      href: "/capacitacion",
-      icon: Search,
-    },
-    {
-      title: "Soporte",
-      href: "/soporte",
-      icon: HelpCircle,
-    }
+    // {
+    //   title: "Calendario",
+    //   href: "/calendario",
+    //   icon: Calendar,
+    // },
+    // {
+    //   title: "Capacitación",
+    //   href: "/capacitacion",
+    //   icon: Search,
+    // },
+    // {
+    //   title: "Soporte",
+    //   href: "/soporte",
+    //   icon: HelpCircle,
+    // }
   ];
 
   return (
@@ -83,8 +82,8 @@ export const MainSidebar: React.FC = () => {
             <SidebarMenu>
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton 
-                    asChild 
+                  <SidebarMenuButton
+                    asChild
                     isActive={location.pathname === item.href}
                     tooltip={item.title}
                   >
@@ -104,8 +103,8 @@ export const MainSidebar: React.FC = () => {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton 
-                  asChild 
+                <SidebarMenuButton
+                  asChild
                   isActive={location.pathname === "/configuracion"}
                   tooltip="Configuración"
                 >
