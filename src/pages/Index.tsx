@@ -1,23 +1,22 @@
-
 import React from "react";
 import { AppLayout } from "@/components/layout/AppLayout";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { WeatherCard } from "@/components/dashboard/WeatherCard";
 import { CultureStatusCard } from "@/components/dashboard/CultureStatusCard";
 import { SensorCard } from "@/components/dashboard/SensorCard";
-import { 
+import {
   Calendar,
   CloudRain,
   FileText,
   AlertTriangle,
   User,
-  Database
+  Database,
 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
   const { toast } = useToast();
-  
+
   const handleViewCultureDetails = () => {
     toast({
       title: "Detalles del cultivo",
@@ -31,7 +30,8 @@ const Index = () => {
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
           <p className="text-muted-foreground mt-2">
-            Bienvenido a AgroTech Integral. Aquí tienes el resumen de tus actividades.
+            Bienvenido a AgroTech Integral. Aquí tienes el resumen de tus
+            actividades.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ const Index = () => {
 
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {/* Estado del clima */}
-          <div className="lg:col-span-1">
+          {/* <div className="lg:col-span-1">
             <h3 className="text-lg font-medium mb-3">Clima Local</h3>
             <WeatherCard
               location="Mi Parcela"
@@ -75,7 +75,7 @@ const Index = () => {
               precipitation={0}
               windSpeed={12}
             />
-          </div>
+          </div> */}
 
           {/* Estado de cultivos */}
           <div className="lg:col-span-2">
